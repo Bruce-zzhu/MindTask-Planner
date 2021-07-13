@@ -11,7 +11,7 @@ import Home from './home/Home.js';
 const PageNavigator = () => {
     return(
         <Router>
-            <Route path="/home" component= {Home} />          
+            <Route path="/home" component= {Home} /> 
         </Router>
     );
 };

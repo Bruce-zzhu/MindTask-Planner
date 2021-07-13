@@ -1,0 +1,19 @@
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  border-bottom: solid 1px;
+  padding: 10px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.ongoing {
+  border-color: #ff5a43;
+}
+
+.past {
+  border-color: #65bf73;
+}
