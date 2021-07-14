@@ -8,7 +8,7 @@ import { createBrowserHistory } from "history";
 
 import Home from './home/Home.js';
 import Index from './index/Index.js';
-
+import About from './about/About.js';
 const customHistory = createBrowserHistory();
 
 const PageNavigator = () => {
@@ -25,6 +25,10 @@ const PageNavigator = () => {
           <Route path="/home">
             <Home/>
           </Route>
+        
+        <Route path="/about">
+            <About/>
+        </Route>
         </Switch>
       </Router>
     </div>
