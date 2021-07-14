@@ -1,24 +1,31 @@
-import React from 'react';
-import NavBar from '../../components/nav_bar/NavBar';
+import React from "react";
+import NavBar from "../../components/nav_bar/NavBar";
+import './About.css';
 
-class About extends React.Component{
-    render () 
-    {
-        return (
+class About extends React.Component {
+  render() {
+    return (
+      <div>
+        
         <div>
-            <NavBar />
-            <h1>About this App</h1>
-            <p>In our daily life, we found it very hard to key motivated to 
-                complete our tasks in time. It's usually the case that we don't 
-                begin until several days before due days. It may severely affect our
-                life routine and the quatity of the tasks.
+          <h1 className="about-app">About this App</h1>
+          <div className="about-content">
+            <p>
+              In our daily life, we found it very hard to key motivated to
+              complete our tasks in time. It's usually the case that we don't
+              begin until several days before due days. It may severely affect
+              our life routine and the quatity of the tasks.
             </p>
-            <br></br>
-            <p>To solve this problem, our app is created to help organize our 
-                tasks and track the progress of our projects </p>
+
+            <p>
+              To solve this problem, our app is created to help organize our
+              tasks and track the progress of our projects.
+            </p>
+          </div>
         </div>
+      </div>
     );
-    }
+  }
 }
 
 export default About;

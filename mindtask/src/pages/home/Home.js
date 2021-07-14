@@ -32,7 +32,7 @@ class Home extends React.Component {
     // Find a project in projects and put is in pastProjects
     const projects = this.state.projects.slice();
     const pastProjects = this.state.pastProjects.slice();
-    const index = projects.findIndex((element) => element.name == name);
+    const index = projects.findIndex((element) => element.name === name);
     pastProjects.push(projects[index]);
     projects.splice(index,1);
 
