@@ -1,11 +1,66 @@
+.about-app-text {
+    text-align: center;
+    width: 60%;
+    background-color: white;
+    margin-left: 20%;
+    font-size: 35px;
+}
 
-.about-app {
-
+.work-image {
+  margin-top: 3%;
+  width: 60%;
 }
 
 .about-content {
-    width: 40%;
-    background-color: aqua;
-    margin-left: 5%;
-    font-size:xx-large;
+  text-align: center;
+  width: 70%;
+  background-color: aqua;
+  margin-left: 15%;
+  font-size: xx-large;
+  border-radius: 20px;
+  padding: 0 10px 10px 10px;
+  margin-bottom: 10%;
 }
+
+.about-app {
+  text-align: center;
+    width: 50%;
+}
+
+.big-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.can-do {
+    vertical-align: top;
+} 
+
+.can-do-text {
+    font-size: 35px;
+    width: 100%;
+    margin-left: 100px;
+}
+
+.can-do-content {
+    font-size: xx-large;
+    width: 35%;
+    position: absolute;
+    right: 5%;
+}
+
+.check-icon {
+    margin-top: 8%;
+    
+}
+
+.check-icon-list {
+    list-style: none;
+}
+
+
+.can-do-content, 
+.check-icon {
+    display: inline-block;
+}
+

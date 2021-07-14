@@ -9,16 +9,25 @@ class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      projects: [],
-      pastProjects: [],
+      projects: this.getProjectsFromLocalStorage("projects"),
+      pastProjects: this.getProjectsFromLocalStorage("pastProjects"),
       // Number of projects
       projectCount: 1,
     };
   };
 
+  getProjectsFromLocalStorage(name) {
+    const projects = localStorage.getItem(name);
+    if(projects) {
+      return JSON.parse(projects);
+    }else {
+      return [];
+    }
+  }
+
   createProject = () => {
     const initialProjects = this.state.projects.slice();
-    const i = this.state.projectCount;
+    const i = this.state.projects.length + this.state.pastProjects.length + 1;
     initialProjects.push(
       {name: "Project " + i},
     );
@@ -26,6 +35,7 @@ class Home extends React.Component {
       projects: initialProjects,
       projectCount: i + 1,
     });
+    localStorage.setItem("projects",JSON.stringify(initialProjects));
   };
 
   finishProject = (name) => {
@@ -40,8 +50,19 @@ class Home extends React.Component {
       projects: projects,
       pastProjects: pastProjects,
     })
+    localStorage.setItem("projects",JSON.stringify(projects));
+    localStorage.setItem("pastProjects",JSON.stringify(pastProjects));
+  }
 
+  deleteProject = (name) => {
+    const pastProjects = this.state.pastProjects.slice();
+    const index = pastProjects.findIndex((element) => element.name === name);
+    pastProjects.splice(index,1);
 
+    this.setState({
+      pastProjects: pastProjects,
+    })
+    localStorage.setItem("pastProjects",JSON.stringify(pastProjects));
   }
 
   render() {
@@ -53,7 +74,7 @@ class Home extends React.Component {
     });
     const pastProjectsElement = this.state.pastProjects.map((project) => {
       return (
-        <div className="box past-project"><PastProjectBox project={project}/></div>
+        <div className="box past-project"><PastProjectBox project={project} onDeleteProject={this.deleteProject}/></div>
       );
     });
     return (
