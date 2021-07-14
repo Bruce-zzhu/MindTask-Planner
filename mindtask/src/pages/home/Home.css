@@ -1,7 +1,3 @@
-h1 {
-  text-align: center;
-}
-
 h2 {
   text-align: center;
   border-bottom: solid 1px;
@@ -16,4 +12,8 @@ h2 {
 
 .past {
   border-color: #65bf73;
+}
+
+.box {
+  display: inline-block;
 }

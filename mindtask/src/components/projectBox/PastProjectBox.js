@@ -1,16 +1,11 @@
 import React, { Component } from "react";
-import "./ProjectBox.css";
+import "./PastProjectBox.css";
 
-class ProjectBox extends Component {
-  finishProjectHandle = () => {
-    const name = this.props.project.name;
-    this.props.onFinishProject(name);
-  }
-
+class PastProjectBox extends Component {
   render() {
     return (
       <div>
-        <button className="project-box">
+        <button className="past-project-box">
           <h3>{this.props.project.name}</h3>
           <p className="subtasks">
             <ul>
@@ -20,11 +15,10 @@ class ProjectBox extends Component {
             </ul>
           </p>
 
-          <button className="finished" onClick={this.finishProjectHandle}>Finished</button>
         </button>
       </div>
     );
   }
 }
 
-export default ProjectBox;
+export default PastProjectBox;
