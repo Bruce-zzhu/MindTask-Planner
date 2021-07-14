@@ -3,28 +3,39 @@ import MindTaskIcon from "../../assets/images/MindTaskIcon.png";
 import "./NavBar.css";
 
 class NavBar extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      // localStorage seems to store string type
+      isLoggedIn: localStorage.getItem("isLoggedIn") === "true",
+    }
+  }
   logoutHandle = () => {
     localStorage.setItem("isLoggedIn", false);
+    this.setState({
+      isLoggedIn: false,
+    })
   }
 
-  login = () => {
-    localStorage.setItem("isLoggedIn", true);
-  }
+  // login = () => {
+  //   localStorage.setItem("isLoggedIn", true);
+  //   this.setState({
+  //     isLoggedIn: true,
+  //   })
+  // }
 
-  isLoggedIn = () => {
-    return localStorage.getItem("isLoggedIn"); 
-  }
 
   render() {
     let navBarContent;
-    if (this.isLoggedIn()) {
+    console.log(this.state.isLoggedIn)
+    if(this.state.isLoggedIn) {
       navBarContent = (
       <div> 
-        <li className="nav-about">
-          <a onClick={this.logoutHandle} href="/" className="about">
+        
+          <a href="/" onClick={this.logoutHandle} className="logout">
             Log out
           </a>
-        </li>
+        
         
       </div>
       );
@@ -32,7 +43,7 @@ class NavBar extends React.Component {
       navBarContent = (
         <div>
           <li className="nav-contact">
-            <a href="/contact" className="contact" onClick={this.login}>
+            <a href="/contact" className="contact">
               Contact
             </a>
           </li>

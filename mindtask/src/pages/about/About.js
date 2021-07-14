@@ -1,6 +1,7 @@
 import React from "react";
 import NavBar from "../../components/nav_bar/NavBar";
 import './About.css';
+// import WorkHard from "../../../assets/images/WorkHard.png";
 
 class About extends React.Component {
   render() {
