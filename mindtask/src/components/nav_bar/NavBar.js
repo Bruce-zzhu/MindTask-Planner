@@ -17,12 +17,12 @@ class NavBar extends React.Component {
     })
   }
 
-  // login = () => {
-  //   localStorage.setItem("isLoggedIn", true);
-  //   this.setState({
-  //     isLoggedIn: true,
-  //   })
-  // }
+  login = () => {
+    localStorage.setItem("isLoggedIn", true);
+    this.setState({
+      isLoggedIn: true,
+    })
+  }
 
 
   render() {
@@ -42,6 +42,11 @@ class NavBar extends React.Component {
     } else {
       navBarContent = (
         <div>
+          <li className="nav-contact">
+            <a href="/home" className="contact" onClick={this.login}>
+              Login
+            </a>
+          </li>
           <li className="nav-contact">
             <a href="/contact" className="contact">
               Contact
