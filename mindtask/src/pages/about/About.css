@@ -1,9 +1,16 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+* {
+    font-family: "Roboto", cursive;
+}
+
 .about-app-text {
     text-align: center;
     width: 60%;
     background-color: white;
     margin-left: 20%;
     font-size: 35px;
+    margin-top: 10%;
 }
 
 .work-image {
@@ -40,6 +47,7 @@
     font-size: 35px;
     width: 100%;
     margin-left: 100px;
+    margin-top: 25%;
 }
 
 .can-do-content {
@@ -47,6 +55,13 @@
     width: 35%;
     position: absolute;
     right: 5%;
+    margin-top: 1%;
+    
+}
+
+.can-do-content > p {
+    margin-bottom: 20%;
+    
 }
 
 .check-icon {
@@ -56,6 +71,11 @@
 
 .check-icon-list {
     list-style: none;
+}
+
+.check-icon-list > li > img {
+    width: 110%;
+    margin-bottom: 200%;
 }
 
 
