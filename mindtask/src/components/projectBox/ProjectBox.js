@@ -2,6 +2,11 @@ import React, { Component } from "react";
 import "./ProjectBox.css";
 
 class ProjectBox extends Component {
+  finishProjectHandle = () => {
+    const name = this.props.project.name;
+    this.props.onFinishProject(name);
+  }
+
   render() {
     return (
       <div>
@@ -15,7 +20,7 @@ class ProjectBox extends Component {
             </ul>
           </p>
 
-          <button className="finished">Finished</button>
+          <button className="finished" onClick={this.finishProjectHandle}>Finished</button>
         </button>
       </div>
     );

@@ -13,6 +13,10 @@ export default class Calendar extends Component {
                 <FullCalendar
                     plugins={[ dayGridPlugin ]}
                     initialView="dayGridMonth"
+                    events={[
+                        { title: 'Project X', date: '2021-07-14' },
+                        { title: 'Project Y', date: '2021-07-20' }
+                      ]}
                 />
             </div>
         )
