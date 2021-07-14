@@ -3,13 +3,12 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
-  Redirect
 } from "react-router-dom";
 import { createBrowserHistory } from "history";
 
 import Home from './home/Home.js';
 import Index from './index/Index.js';
+import About from './about/About.js';
 
 const customHistory = createBrowserHistory();
 
@@ -26,6 +25,9 @@ const PageNavigator = () => {
           </Route>
           <Route path="/home">
             <Home/>
+          </Route>
+          <Route path="/about">
+            <About/>
           </Route>
         </Switch>
       </Router>

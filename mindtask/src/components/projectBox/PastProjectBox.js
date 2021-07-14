@@ -6,7 +6,7 @@ class PastProjectBox extends Component {
     return (
       <div>
         <button className="past-project-box">
-          <h3>Project Name</h3>
+          <h3>{this.props.project.name}</h3>
           <p className="subtasks">
             <ul>
               <li>subtask 1</li>
