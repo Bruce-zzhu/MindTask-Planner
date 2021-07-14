@@ -68,7 +68,7 @@ class NavBar extends React.Component {
           <div className="nav-items">
           <ul>
               <li className="nav-contact">
-                <a href="/home" className="contact" onClick={this.login}>
+                <a href="/login" className="login" onClick={this.login}>
                   Login
                 </a>
               </li>

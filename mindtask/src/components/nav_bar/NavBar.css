@@ -45,7 +45,8 @@ a {
 }
 
 .contact,
-.about {
+.about,
+.login {
     color: black;
     text-decoration: none;
 }
