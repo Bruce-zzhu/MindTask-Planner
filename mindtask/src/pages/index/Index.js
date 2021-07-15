@@ -1,8 +1,8 @@
 import React from "react";
 
 class Index extends React.Component {
-  render() {
-    return (
+  render () {
+    return(    
       <div className="index">
         <ul>
           <li>Instagram</li>

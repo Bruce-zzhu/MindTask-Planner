@@ -1,11 +1,12 @@
 import React from "react";
 import NavBar from "../../components/nav_bar/NavBar";
-import "./About.css";
+import './About.css';
 
 class About extends React.Component {
   render() {
     return (
       <div>
+        
         <div>
           <h1 className="about-app">About this App</h1>
           <div className="about-content">

@@ -14,6 +14,7 @@ class PastProjectBox extends Component {
               <li>subtask 3</li>
             </ul>
           </p>
+
         </button>
       </div>
     );
