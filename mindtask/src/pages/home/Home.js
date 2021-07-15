@@ -8,9 +8,21 @@ import PastProjectBox from "../../components/projectBox/PastProjectBox";
 class Home extends React.Component {
   constructor(props) {
     super(props);
+    var projects = this.getProjectsFromLocalStorage("projects");
+    var pastProjects = this.getProjectsFromLocalStorage("pastProjects");
+
+
+    var current_project = localStorage.getItem("current_project");
+    
+    if(current_project) {
+      projects.push(JSON.parse(current_project))
+      localStorage.setItem("current_project", "");
+      localStorage.setItem("projects", JSON.stringify(projects));
+    }
+    console.log("here")
     this.state = {
-      projects: this.getProjectsFromLocalStorage("projects"),
-      pastProjects: this.getProjectsFromLocalStorage("pastProjects"),
+      projects: projects,
+      pastProjects: pastProjects,
       // Number of projects
       projectCount: 1,
     };
@@ -40,7 +52,7 @@ class Home extends React.Component {
     // Find a project in projects and put is in pastProjects
     const projects = this.state.projects.slice();
     const pastProjects = this.state.pastProjects.slice();
-    const index = projects.findIndex((element) => element.name === name);
+    const index = projects.findIndex((element) => element.topic === name);
     pastProjects.push(projects[index]);
     projects.splice(index, 1);
 
@@ -54,7 +66,7 @@ class Home extends React.Component {
 
   deleteProject = (name) => {
     const pastProjects = this.state.pastProjects.slice();
-    const index = pastProjects.findIndex((element) => element.name === name);
+    const index = pastProjects.findIndex((element) => element.topic === name);
     pastProjects.splice(index, 1);
 
     this.setState({
@@ -86,9 +98,9 @@ class Home extends React.Component {
         <Calendar />
         <h2 className="ongoing">Ongoing Peojects</h2>
 
-        <div className="box create" onClick={this.createProject}>
+        <a className="box create" href="/edit">
           <CreateProjectBox />
-        </div>
+        </a>
         {porjectsElement}
 
         <h2 className="past">Past Projects</h2>

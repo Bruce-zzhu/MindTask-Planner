@@ -3,20 +3,39 @@ import "./ProjectBox.css";
 
 class ProjectBox extends Component {
   finishProjectHandle = () => {
-    const name = this.props.project.name;
+    const name = this.props.project.topic;
     this.props.onFinishProject(name);
   };
 
+  subTaskList = () => {
+    const children = this.props.project.children;
+    if(children) {
+      return children.map((ele) => {
+        return <li>{ele.topic}</li>
+      })
+    }
+  }
+
+  editProject = () => {
+    var projects = localStorage.getItem("projects");
+    if(projects) {
+      projects = JSON.parse(projects);
+      const index = projects.findIndex((element) => element.topic === this.props.project.topic);
+      localStorage.setItem("current_project", projects[index] ? JSON.stringify(projects[index]) : "");
+      projects.splice(index, 1);
+      localStorage.setItem("projects", JSON.stringify(projects));
+    }
+  }
+
   render() {
+    const subTaskList = this.subTaskList();
     return (
-      <div>
-        <button className="project-box">
-          <h3>{this.props.project.name}</h3>
+      <form action="/edit">
+        <button className="project-box" onClick={this.editProject}>
+          <h3>{this.props.project.topic}</h3>
           <p className="subtasks">
             <ul>
-              <li>subtask 1</li>
-              <li>subtask 2</li>
-              <li>subtask 3</li>
+              {subTaskList}
             </ul>
           </p>
 
@@ -24,7 +43,7 @@ class ProjectBox extends Component {
             Finished
           </button>
         </button>
-      </div>
+      </form>
     );
   }
 }
