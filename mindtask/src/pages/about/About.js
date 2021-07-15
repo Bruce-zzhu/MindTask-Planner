@@ -20,7 +20,7 @@ class About extends React.Component {
               monitor the current progress of one or multiple DOTs. Most people
               tend to be over-optimistic about what they can achieve in the long
               term. This could be due to the lack of experience, but is more
-              likely caused by procrastination. 
+              likely caused by procrastination.
             </p>
             <p>
               To solve this problem, our app is created to help organize our

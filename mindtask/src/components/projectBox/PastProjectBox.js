@@ -5,7 +5,7 @@ class PastProjectBox extends Component {
   deleteProjectHandle = () => {
     const name = this.props.project.name;
     this.props.onDeleteProject(name);
-  }
+  };
   render() {
     return (
       <div>
@@ -18,7 +18,9 @@ class PastProjectBox extends Component {
               <li>subtask 3</li>
             </ul>
           </p>
-          <button className="delete" onClick={this.deleteProjectHandle}>Delete</button>
+          <button className="delete" onClick={this.deleteProjectHandle}>
+            Delete
+          </button>
         </button>
       </div>
     );

@@ -4,25 +4,23 @@ import "./NavBar.css";
 
 class NavBar extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       // localStorage seems to store string type
       isLoggedIn: localStorage.getItem("isLoggedIn") === "true",
-    }
+    };
   }
   logoutHandle = () => {
     localStorage.setItem("isLoggedIn", false);
     this.setState({
       isLoggedIn: false,
-    })
-  }
-
-
+    });
+  };
 
   render() {
     let navBarContent;
-    console.log(this.state.isLoggedIn)
-    if(this.state.isLoggedIn) {
+    console.log(this.state.isLoggedIn);
+    if (this.state.isLoggedIn) {
       navBarContent = (
         <div>
           <div className="mindtask">
@@ -44,7 +42,7 @@ class NavBar extends React.Component {
               </div>
             </ul>
           </div>
-      </div>
+        </div>
       );
     } else {
       navBarContent = (
@@ -60,7 +58,7 @@ class NavBar extends React.Component {
             </a>
           </div>
           <div className="nav-items">
-          <ul>
+            <ul>
               <li className="nav-contact">
                 <a href="/login" className="login">
                   Login
@@ -76,18 +74,14 @@ class NavBar extends React.Component {
                   About
                 </a>
               </li>
-
-          </ul>
+            </ul>
           </div>
         </div>
       );
     }
     return (
       <header>
-      <div class="navbar">
-        {navBarContent}
-
-      </div>
+        <div class="navbar">{navBarContent}</div>
       </header>
     );
   }

@@ -14,13 +14,13 @@ class Home extends React.Component {
       // Number of projects
       projectCount: 1,
     };
-  };
+  }
 
   getProjectsFromLocalStorage(name) {
     const projects = localStorage.getItem(name);
-    if(projects) {
+    if (projects) {
       return JSON.parse(projects);
-    }else {
+    } else {
       return [];
     }
   }
@@ -28,14 +28,12 @@ class Home extends React.Component {
   createProject = () => {
     const initialProjects = this.state.projects.slice();
     const i = this.state.projects.length + this.state.pastProjects.length + 1;
-    initialProjects.push(
-      {name: "Project " + i},
-    );
+    initialProjects.push({ name: "Project " + i });
     this.setState({
       projects: initialProjects,
       projectCount: i + 1,
     });
-    localStorage.setItem("projects",JSON.stringify(initialProjects));
+    localStorage.setItem("projects", JSON.stringify(initialProjects));
   };
 
   finishProject = (name) => {
@@ -44,48 +42,54 @@ class Home extends React.Component {
     const pastProjects = this.state.pastProjects.slice();
     const index = projects.findIndex((element) => element.name === name);
     pastProjects.push(projects[index]);
-    projects.splice(index,1);
+    projects.splice(index, 1);
 
     this.setState({
       projects: projects,
       pastProjects: pastProjects,
-    })
-    localStorage.setItem("projects",JSON.stringify(projects));
-    localStorage.setItem("pastProjects",JSON.stringify(pastProjects));
-  }
+    });
+    localStorage.setItem("projects", JSON.stringify(projects));
+    localStorage.setItem("pastProjects", JSON.stringify(pastProjects));
+  };
 
   deleteProject = (name) => {
     const pastProjects = this.state.pastProjects.slice();
     const index = pastProjects.findIndex((element) => element.name === name);
-    pastProjects.splice(index,1);
+    pastProjects.splice(index, 1);
 
     this.setState({
       pastProjects: pastProjects,
-    })
-    localStorage.setItem("pastProjects",JSON.stringify(pastProjects));
-  }
+    });
+    localStorage.setItem("pastProjects", JSON.stringify(pastProjects));
+  };
 
   render() {
     const porjectsElement = this.state.projects.map((project) => {
       return (
-        <div className="box project" ><ProjectBox project={project} onFinishProject={this.finishProject}/></div>
-        
+        <div className="box project">
+          <ProjectBox project={project} onFinishProject={this.finishProject} />
+        </div>
       );
     });
     const pastProjectsElement = this.state.pastProjects.map((project) => {
       return (
-        <div className="box past-project"><PastProjectBox project={project} onDeleteProject={this.deleteProject}/></div>
+        <div className="box past-project">
+          <PastProjectBox
+            project={project}
+            onDeleteProject={this.deleteProject}
+          />
+        </div>
       );
     });
     return (
       <div className="home">
         <Calendar />
         <h2 className="ongoing">Ongoing Peojects</h2>
-        
-        <div className="box create" onClick={this.createProject} >
+
+        <div className="box create" onClick={this.createProject}>
           <CreateProjectBox />
         </div>
-          {porjectsElement}
+        {porjectsElement}
 
         <h2 className="past">Past Projects</h2>
 
