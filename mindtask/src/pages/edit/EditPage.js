@@ -1,7 +1,7 @@
 import React from "react";
 import Section from "../../components/edit/Section";
 import Card from "../../components/edit/Card";
-import MindMap from "../../components/edit/MindMap"
+import MindMap from "../../components/edit/MindMap";
 
 const dummy = {
   name: "TooooDooooo",
