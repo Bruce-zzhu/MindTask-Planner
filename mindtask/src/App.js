@@ -2,13 +2,13 @@
 
 import React from 'react';
 import './App.css';
-import background from './Background.jpg'
+import background from './assets/images/Background.png'
 
 import NavBar from './components/nav_bar/NavBar'
 
 
 import PageNavigator from './pages/PageNavigator.js'
-import Footer from './components/Footer'
+import Footer from './components/footer/Footer'
 
 class App extends React.Component {
   constructor(props) {
@@ -41,14 +41,15 @@ class App extends React.Component {
             backgroundImage: 'url('+background+')',
             backgroundSize: "Cover",
             height:"100vh",
-           
-          
-          }}>
+            }}>
       
          
           
         <PageNavigator /> 
+        
         <Footer/>
+        
+        
         </div>
         </div>
       

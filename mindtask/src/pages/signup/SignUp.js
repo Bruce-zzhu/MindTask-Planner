@@ -10,16 +10,16 @@ class SignUp extends React.Component {
         <form class="form" action="./login" id="createAccount">
                 <h1 class="form__title">Sign up</h1>
                 <div class="form__input-group">
-                    <input type="text" id="signupUsername" class="form__input" autofocus placeholder="Username" />
+                    <input type="text" id="signupUsername" class="signup__input" autofocus placeholder="Username" />
                 </div>
                 <div class="form__input-group">
-                    <input type="email" id="signupEmail" class="form__input" autofocus placeholder="Email Address" />
+                    <input type="email" id="signupEmail" class="signup__input" autofocus placeholder="Email Address" />
                 </div>
                 <div class="form__input-group">
-                    <input type="password" id="signupPassword" class="form__input" autofocus placeholder="Password" />
+                    <input type="password" id="signupPassword" class="signup__input" autofocus placeholder="Password" />
                 </div>
                 <div class="form__input-group">
-                    <input type="password" class="form__input" autofocus placeholder="Confirm password" />
+                    <input type="password" class="signup__input" autofocus placeholder="Confirm password" />
                 </div>
                 <button class="form__button" id="signupContinue" type="submit">Continue</button>
                 <p class="form__text">

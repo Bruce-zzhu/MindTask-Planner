@@ -28,25 +28,18 @@ const PageNavigator = () => {
           <Route path="/home">
             <Home/>
           </Route>
-
-        
         <Route path="/about">
             <About/>
         </Route>
-
           <Route path="/about">
             <About/>
           </Route>
-=
-
-
           <Route path="/login">
             <LogIn/>
           </Route>
           <Route path="/signup">
             <SignUp/>
           </Route>
-
         </Switch>
       </Router>
     </div>
