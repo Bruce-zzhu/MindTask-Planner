@@ -1,16 +1,11 @@
-
-
-
 import React from "react";
 
-
-import './About.css';
+import "./About.css";
 // import WorkHard from "../../../assets/images/WorkHard.png";
 
 import "./About.css";
 import WorkHard from "../../assets/images/WorkHard.png";
 import CheckIcon from "../../assets/images/CheckIcon.png";
-
 
 class About extends React.Component {
   render() {
@@ -21,16 +16,16 @@ class About extends React.Component {
           <div className="about-content">
             <img src={WorkHard} className="work-image" alt="WorkHard" />
             <p>
-              In our daily life, we found it very hard to key motivated to
-              complete our tasks in time. It's usually the case that we don't
-              begin until several days before due days. It may severely affect
-              our life routine and the quatity of the tasks.
+              People often have many deadline-oriented tasks (DOTs) and need to
+              monitor the current progress of one or multiple DOTs. Most people
+              tend to be over-optimistic about what they can achieve in the long
+              term. This could be due to the lack of experience, but is more
+              likely caused by procrastination. 
             </p>
             <p>
               To solve this problem, our app is created to help organize our
-              tasks and track the progress of our projects.
+              tasks in a better way and track the progress of our projects.
             </p>
-            
           </div>
         </div>
 
@@ -63,4 +58,3 @@ class About extends React.Component {
 }
 
 export default About;
-
