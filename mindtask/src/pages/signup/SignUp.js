@@ -5,7 +5,9 @@ class SignUp extends React.Component {
 
   render() {
     return (
-    <div>
+    <div style={{
+        height: "100vh"
+    }}>
         <div class='rectangle'>            
         <form class="form" action="./login" id="createAccount">
                 <h1 class="form__title">Sign up</h1>
