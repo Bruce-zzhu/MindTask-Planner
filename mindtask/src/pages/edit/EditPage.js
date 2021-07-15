@@ -48,7 +48,9 @@ class EditPage extends React.Component {
     return (
       <div>
         <Card>
-          <ProgressBar completed={60} />
+          <ProgressBar completed={60} width="800px" />
+        </Card>
+        <Card>
           <Section data={this.state.data} key={this.state.data.id} />
         </Card>
         <Card>
