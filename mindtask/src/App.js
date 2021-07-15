@@ -35,22 +35,18 @@ class App extends React.Component {
       
         
         <div>
-          <NavBar isLoggedIn={this.state.isLoggedIn} logout={this.logout}/>
-           <div class = "bg_image"
-             style = {{
+          
+          <div class = "bg_image"
+            style = {{
             backgroundImage: 'url('+background+')',
             backgroundSize: "Cover",
-            height:"100vh",
-            }}>
-      
-         
-          
-        <PageNavigator /> 
-        
-        <Footer/>
-        
-        
-        </div>
+            backgroundAttachment: "fixed",
+          }}>
+            <NavBar isLoggedIn={this.state.isLoggedIn} logout={this.logout}/>
+            <PageNavigator />
+            
+          </div>
+          <Footer/>
         </div>
       
     );

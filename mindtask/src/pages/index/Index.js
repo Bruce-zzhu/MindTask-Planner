@@ -4,7 +4,7 @@ import logo from "./corner.svg";
 class Index extends React.Component {
   render () {
     return(
-      <div style={{flex:1}}>
+      <div style={{flex:1, height: "100vh"}} >
         <div style={{flex:1, textAlign:'center', paddingTop:"10%"}}>
           <text style={{fontSize:"80px"}}>
             Plan Your Projects

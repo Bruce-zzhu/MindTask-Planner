@@ -17,12 +17,6 @@ class NavBar extends React.Component {
     })
   }
 
-  login = () => {
-    localStorage.setItem("isLoggedIn", true);
-    this.setState({
-      isLoggedIn: true,
-    })
-  }
 
 
   render() {
@@ -68,7 +62,7 @@ class NavBar extends React.Component {
           <div className="nav-items">
           <ul>
               <li className="nav-contact">
-                <a href="/login" className="login" onClick={this.login}>
+                <a href="/login" className="login">
                   Login
                 </a>
               </li>
