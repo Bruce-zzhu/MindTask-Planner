@@ -1,103 +1,99 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 
 * {
-    font-family: "Roboto", cursive;
+  font-family: "Roboto", cursive;
 }
 
 .rectangle {
-    top: 33%;
-    width: 400px;
-    max-width: 400px;
-    margin: auto;
-    margin-top:10%;
-    padding: 2rem;
+  top: 33%;
+  width: 400px;
+  max-width: 400px;
+  margin: auto;
+  margin-top: 10%;
+  padding: 2rem;
 
-    background: #C7E5FD;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-    border-radius: 40px;
+  background: #c7e5fd;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 40px;
 }
-
 
 .form__title {
-    font-size: 40px;
-    position: absolute;
-    width: 171px;
-    height: 85px;
-    top: 20%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%) ;
-    margin-bottom: 2rem;
-    text-align: center;
-    color: black;
+  font-size: 40px;
+  position: absolute;
+  width: 171px;
+  height: 85px;
+  top: 20%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  margin-bottom: 2rem;
+  text-align: center;
+  color: black;
 }
 
-.form__email{
-    
-    font-size: larger;
+.form__email {
+  font-size: larger;
 }
 
-.form__password{
-    
-    font-size: larger;
+.form__password {
+  font-size: larger;
 }
 
 .form__input-group {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .form__input {
-    display: block;
-    height: 50px;
-    width: 100%;
-    padding: 0.75rem;
-    box-sizing: border-box;
-    border-radius: 10px;
-    border: 1px solid black;
-    outline: none;
-    background: #ffffff;
+  display: block;
+  height: 50px;
+  width: 100%;
+  padding: 0.75rem;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: 1px solid black;
+  outline: none;
+  background: #ffffff;
 }
 
 .form__input:focus {
-    border-color: var(--color-primary);
-    background: #ffffff;
+  border-color: var(--color-primary);
+  background: #ffffff;
 }
 
 .form__button {
-    margin-top: 5%;
-    margin-left: 25%;
-    width: 50%;
-    padding: 1rem 2rem;
-    font-weight: bold;
-    font-size: 1.1rem;
-    color: #ffffff;
-    border: none;
-    border-radius: 11px;
-    outline: none;
-    cursor: pointer;
-    background-color: #F58585;
-    
+  margin-top: 5%;
+  margin-left: 25%;
+  width: 50%;
+  padding: 1rem 2rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #ffffff;
+  border: none;
+  border-radius: 11px;
+  outline: none;
+  cursor: pointer;
+  background-color: #f58585;
 }
 
 .form__button:hover {
-    background-color: #f36060;
+  background-color: #f36060;
 }
 
 .form__button:active {
-    transform: scale(0.98);
+  transform: scale(0.98);
 }
 
 .form__text {
-    color: black;
-    text-align: center;
+  color: black;
+  text-align: center;
 }
 
 .form__link {
-    color:black;;
-    text-decoration: none;
-    cursor: pointer;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .form__link:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }

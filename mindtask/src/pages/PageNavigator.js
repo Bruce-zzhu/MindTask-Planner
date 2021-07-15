@@ -1,50 +1,46 @@
-import {React} from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from "react-router-dom";
+import { React } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { createBrowserHistory } from "history";
 
-import Home from './home/Home.js';
-import Index from './index/Index.js';
-import About from './about/About.js';
-import LogIn from './login/LogIn.js';
-import SignUp from './signup/SignUp.js';
-import Contact from './contact/Contact.js';
+import Home from "./home/Home.js";
+import Index from "./index/Index.js";
+import About from "./about/About.js";
+import LogIn from "./login/LogIn.js";
+import SignUp from "./signup/SignUp.js";
+import Contact from "./contact/Contact.js";
 import EditPage from "./edit/EditPage.js";
 
 const customHistory = createBrowserHistory();
 
 const PageNavigator = () => {
-  return(
+  return (
     <div>
       <Router history={customHistory}>
         <Switch>
           <Route exact path="/">
-            <Index/>
+            <Index />
           </Route>
           <Route path="/index">
-            <Index/>
+            <Index />
           </Route>
           <Route path="/home">
-            <Home/>
+            <Home />
           </Route>
           <Route path="/about">
-            <About/>
+            <About />
           </Route>
           <Route path="/login">
-            <LogIn/>
+            <LogIn />
           </Route>
           <Route path="/signup">
-            <SignUp/>
+            <SignUp />
           </Route>
           <Route path="/contact">
-            <Contact/>
+            <Contact />
           </Route>
-					<Route exact path="/editPage">
-						<EditPage />
-					</Route>
+          <Route exact path="/editPage">
+            <EditPage />
+          </Route>
         </Switch>
       </Router>
     </div>
