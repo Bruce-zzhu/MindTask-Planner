@@ -11,6 +11,7 @@ import Index from './index/Index.js';
 import About from './about/About.js';
 import LogIn from './login/LogIn.js';
 import SignUp from './signup/SignUp.js';
+import Contact from './contact/Contact.js';
 
 const customHistory = createBrowserHistory();
 
@@ -36,6 +37,9 @@ const PageNavigator = () => {
           </Route>
           <Route path="/signup">
             <SignUp/>
+          </Route>
+          <Route path="/contact">
+            <Contact/>
           </Route>
         </Switch>
       </Router>
