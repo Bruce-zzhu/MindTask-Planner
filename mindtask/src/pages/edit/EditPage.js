@@ -1,4 +1,7 @@
 import React from "react";
+
+import ProgressBar from "@ramonak/react-progress-bar";
+
 import Section from "../../components/edit/Section";
 import Card from "../../components/edit/Card";
 import MindMap from "../../components/edit/MindMap";
@@ -45,6 +48,7 @@ class EditPage extends React.Component {
     return (
       <div>
         <Card>
+          <ProgressBar completed={60} />
           <Section data={this.state.data} key={this.state.data.id} />
         </Card>
         <Card>

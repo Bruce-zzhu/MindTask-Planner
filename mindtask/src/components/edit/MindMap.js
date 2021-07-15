@@ -82,8 +82,8 @@ export class MindMap extends react.Component {
       <div>
         <button onClick={this.dumpProject.bind(this)}>save</button>
         <p>
-          Press 'Enter' to add same level item, and 'Insert' to add next level item.
-          'Del' to delete a node.
+          Press 'Enter' to add same level item, and 'Insert' to add next level
+          item. 'Del' to delete a node.
         </p>
         <br />
         <JsMind
