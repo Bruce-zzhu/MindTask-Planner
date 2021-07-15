@@ -11,16 +11,16 @@ export class MindMap extends react.Component {
     this.state = {
       mind: this._projectToMap({/* project data */ }),
       options: {
-        theme: 'orange',
+        theme: 'primary',
         editable: true,
-        support_html: true,    // 是否支持节点里的HTML元素
+        support_html: false,    // 是否支持节点里的HTML元素
       }
     }
   }
 
   render() {
-    const { mind, options } = this.props;
-    return (<JsMind mind={mind} options={options} />)
+    const { mind, options } = this.state;
+    return (<JsMind mind={mind} options={options} styles={{height: 500}} />)
   }
 
   _projectToMap(project) {

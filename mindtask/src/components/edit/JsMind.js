@@ -1,8 +1,8 @@
 import React from 'react'
-import 'jsmind'
+import jsMind from 'jsmind'
 import 'jsmind/style/jsmind.css'
 
-// from https://github.com/xiaohuoz/jsmind-react/blob/master/index.html
+// initially from https://github.com/xiaohuoz/jsmind-react/blob/master/index.html
 export class ReactJsmind extends React.Component {
   componentDidMount() {
     const { mind, options } = this.props;
@@ -10,9 +10,11 @@ export class ReactJsmind extends React.Component {
       ...options,
       container: 'jsmind_container',
     }
-    const jm = new window.jsMind(opt);
+    const jm = new jsMind(opt);
     this.jm = jm;
     jm.show(mind);
+
+    this.jm = jm
   }
   componentWillReceiveProps(props) {
     const { mind, options } = props;
@@ -56,7 +58,7 @@ export class ReactJsmind extends React.Component {
         this.realSelectNode = this.getNode(e);
         onContextMenu(e, this.realSelectNode);
       }}
-      style={styles}
+      style={this.props.styles}
     ></div>);
   }
 }

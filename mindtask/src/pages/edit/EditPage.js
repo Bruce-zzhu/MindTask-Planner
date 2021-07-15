@@ -49,10 +49,15 @@ const dummy = {
 };
 const EditPage = () => {
   return (
-    <Card>
-      <Section category={dummy} key={dummy.name} />
-      <MindMap />
-    </Card>
+    <div>
+      <Card>
+        <Section category={dummy} key={dummy.name} />
+      </Card>
+      <Card>
+        <h1>Mind map</h1>
+        <MindMap />
+      </Card>
+    </div>
   );
 };
 
