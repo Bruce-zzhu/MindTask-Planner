@@ -33,8 +33,9 @@ class App extends React.Component {
   render() {
     return (
       
-
+        
         <div>
+          <NavBar isLoggedIn={this.state.isLoggedIn} logout={this.logout}/>
            <div class = "bg_image"
              style = {{
             backgroundImage: 'url('+background+')',
@@ -42,16 +43,13 @@ class App extends React.Component {
             height:"100vh",
            
           
-          }}></div>
+          }}>
       
-          <Nevbar/>
-          <PageNavigator />
-          <Footer/>
+         
           
-      
-
-        <NavBar isLoggedIn={this.state.isLoggedIn} logout={this.logout}/>
         <PageNavigator /> 
+        <Footer/>
+        </div>
         </div>
       
     );

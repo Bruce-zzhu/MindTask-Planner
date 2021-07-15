@@ -61,6 +61,7 @@ class NavBar extends React.Component {
       );
     }
     return (
+      <header>
       <div class="navbar">
         <div className="mindtask">
           <a href="/" className="mindtask-text">
@@ -76,6 +77,7 @@ class NavBar extends React.Component {
           <ul>{navBarContent}</ul>
         </div>
       </div>
+      </header>
     );
   }
 }
