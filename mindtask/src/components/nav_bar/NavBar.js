@@ -3,63 +3,92 @@ import MindTaskIcon from "../../assets/images/MindTaskIcon.png";
 import "./NavBar.css";
 
 class NavBar extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      // localStorage seems to store string type
+      isLoggedIn: localStorage.getItem("isLoggedIn") === "true",
+    }
+  }
   logoutHandle = () => {
     localStorage.setItem("isLoggedIn", false);
+    this.setState({
+      isLoggedIn: false,
+    })
   }
 
-  login = () => {
-    localStorage.setItem("isLoggedIn", true);
-  }
 
-  isLoggedIn = () => {
-    return localStorage.getItem("isLoggedIn"); 
-  }
 
   render() {
     let navBarContent;
-    if (this.isLoggedIn()) {
+    console.log(this.state.isLoggedIn)
+    if(this.state.isLoggedIn) {
       navBarContent = (
-      <div> 
-        <li className="nav-about">
-          <a onClick={this.logoutHandle} href="/" className="about">
-            Log out
-          </a>
-        </li>
-        
+        <div>
+          <div className="mindtask">
+            <a href="/home" className="mindtask-text">
+              <img
+                src={MindTaskIcon}
+                alt="MindTaskIcon"
+                className="mindtask-icon"
+              />
+              My Projects
+            </a>
+          </div>
+          <div className="nav-items">
+            <ul>
+              <div>
+                <a href="/" onClick={this.logoutHandle} className="logout">
+                  Log out
+                </a>
+              </div>
+            </ul>
+          </div>
       </div>
       );
     } else {
       navBarContent = (
         <div>
-          <li className="nav-contact">
-            <a href="/contact" className="contact" onClick={this.login}>
-              Contact
+          <div className="mindtask">
+            <a href="/" className="mindtask-text">
+              <img
+                src={MindTaskIcon}
+                alt="MindTaskIcon"
+                className="mindtask-icon"
+              />
+              MindTask
             </a>
-          </li>
-          <li className="nav-about">
-            <a href="/about" className="about">
-              About
-            </a>
-          </li>
+          </div>
+          <div className="nav-items">
+          <ul>
+              <li className="nav-contact">
+                <a href="/login" className="login">
+                  Login
+                </a>
+              </li>
+              <li className="nav-contact">
+                <a href="/contact" className="contact">
+                  Contact
+                </a>
+              </li>
+              <li className="nav-about">
+                <a href="/about" className="about">
+                  About
+                </a>
+              </li>
+
+          </ul>
+          </div>
         </div>
       );
     }
     return (
+      <header>
       <div class="navbar">
-        <div className="mindtask">
-          <a href="/" className="mindtask-text">
-            <img
-              src={MindTaskIcon}
-              alt="MindTaskIcon"
-              className="mindtask-icon"
-            />
-            MindTask
-          </a>
-        </div>
-        <div className="nav-items">
-          <ul>{navBarContent}</ul>
-        </div>
+        {navBarContent}
+
       </div>
+      </header>
     );
   }
 }

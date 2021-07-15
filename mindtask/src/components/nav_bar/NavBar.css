@@ -45,7 +45,15 @@ a {
 }
 
 .contact,
-.about {
+.about,
+.login {
     color: black;
     text-decoration: none;
+}
+
+.logout {
+    color: black;
+    text-decoration: none;
+    font-size: x-large;
+    cursor: pointer;
 }

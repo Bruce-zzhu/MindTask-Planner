@@ -1,11 +1,89 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
 
-.about-app {
+* {
+    font-family: "Roboto", cursive;
+}
 
+.about-app-text {
+    text-align: center;
+    width: 60%;
+    background-color: transparent;
+    margin-left: 20%;
+    font-size: 35px;
+    margin-top: 10%;
+}
+
+.work-image {
+  margin-top: 3%;
+  width: 60%;
 }
 
 .about-content {
-    width: 40%;
-    background-color: aqua;
-    margin-left: 5%;
-    font-size: x-large;
+  text-align: center;
+  width: 70%;
+  background-color: aqua;
+  margin-left: 15%;
+  font-size: xx-large;
+  border-radius: 30px;
+  padding: 0 25px 10px 25px;
+  margin-bottom: 10%;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
 }
+
+
+.about-app {
+  text-align: center;
+    width: 50%;
+}
+
+.big-container {
+    height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.can-do {
+    vertical-align: top;
+} 
+
+.can-do-text {
+    font-size: 35px;
+    width: 100%;
+    margin-left: 100px;
+    margin-top: 25%;
+}
+
+.can-do-content {
+    font-size: xx-large;
+    width: 35%;
+    position: absolute;
+    right: 5%;
+    margin-top: 1%;
+    
+}
+
+.can-do-content > p {
+    margin-bottom: 20%;
+    
+}
+
+.check-icon {
+    margin-top: 8%;
+    
+}
+
+.check-icon-list {
+    list-style: none;
+}
+
+.check-icon-list > li > img {
+    width: 110%;
+    margin-bottom: 200%;
+}
+
+
+.can-do-content, 
+.check-icon {
+    display: inline-block;
+}
+
