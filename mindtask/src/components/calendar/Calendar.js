@@ -26,20 +26,19 @@ export default class Calendar extends Component {
     // Get projects from localStorage, put them on calendar
 
     const projects = JSON.parse(localStorage.getItem("projects"));
-    if(projects) {
+    if (projects) {
       projects.map((ele) => {
         const defaultColor = "#FF5A43";
         if (ele.date) {
           const newEvent = { title: ele.name, date: ele.date };
-  
+
           newEvent["backgroundColor"] = ele.color ? ele.color : defaultColor;
           newEvent["borderColor"] = ele.color ? ele.color : defaultColor;
-  
+
           events.push(newEvent);
         }
       });
     }
-
 
     this.state = {
       events: events,
