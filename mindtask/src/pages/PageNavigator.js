@@ -9,6 +9,8 @@ import { createBrowserHistory } from "history";
 import Home from './home/Home.js';
 import Index from './index/Index.js';
 import About from './about/About.js';
+import LogIn from './login/LogIn.js';
+import SignUp from './signup/SignUp.js';
 
 const customHistory = createBrowserHistory();
 
@@ -34,6 +36,15 @@ const PageNavigator = () => {
 
           <Route path="/about">
             <About/>
+          </Route>
+=
+
+
+          <Route path="/login">
+            <LogIn/>
+          </Route>
+          <Route path="/signup">
+            <SignUp/>
           </Route>
 
         </Switch>
