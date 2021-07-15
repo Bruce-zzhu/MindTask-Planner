@@ -1,7 +1,16 @@
+
+
+
 import React from "react";
+
+
+import './About.css';
+// import WorkHard from "../../../assets/images/WorkHard.png";
+
 import "./About.css";
 import WorkHard from "../../assets/images/WorkHard.png";
 import CheckIcon from "../../assets/images/CheckIcon.png";
+
 
 class About extends React.Component {
   render() {
@@ -54,3 +63,4 @@ class About extends React.Component {
 }
 
 export default About;
+

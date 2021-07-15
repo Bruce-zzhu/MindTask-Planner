@@ -1,8 +1,14 @@
+
+
 import React from 'react';
 import './App.css';
+import background from './assets/images/Background.png'
+
 import NavBar from './components/nav_bar/NavBar'
 
-import PageNavigator from './pages/PageNavigator.js';
+
+import PageNavigator from './pages/PageNavigator.js'
+import Footer from './components/footer/Footer'
 
 class App extends React.Component {
   constructor(props) {
@@ -26,10 +32,22 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <NavBar isLoggedIn={this.state.isLoggedIn} logout={this.logout}/>
-        <PageNavigator /> 
-      </div>
+      
+        
+        <div>
+          
+          <div class = "bg_image"
+            style = {{
+            backgroundImage: 'url('+background+')',
+            backgroundSize: "Cover",
+            backgroundAttachment: "fixed",
+          }}>
+            <NavBar isLoggedIn={this.state.isLoggedIn} logout={this.logout}/>
+            <PageNavigator />
+            
+          </div>
+          <Footer/>
+        </div>
       
     );
   }
