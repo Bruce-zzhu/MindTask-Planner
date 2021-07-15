@@ -25,16 +25,16 @@ class Block extends React.Component {
   expand() {
     let arr = [];
     this.setState({ on: !this.state.on });
-    Object.keys(this.props.data).forEach((key) => {
-      if (key !== "name" && key !== "style") {
+    if (this.props.data.children) {
+      this.props.data.children.forEach(child => {
         arr.push(
           <Section
-            category={this.props.data[key]}
-            key={this.props.data[key].name}
+            data={child}
+            key={child.id}
           />
         );
-      }
-    });
+      })
+    }
     this.setState({ data: arr });
   }
 
@@ -42,12 +42,12 @@ class Block extends React.Component {
     return (
       <div key={this.props.data.name}>
         <div
-          style={this.state.style[this.props.data.style]}
+          style={this.state.style['list']}
           onClick={() => {
             this.expand();
           }}
         >
-          {this.props.data.name}
+          {this.props.data.topic}
         </div>
         {this.state.on ? this.state.data : ""}
       </div>
