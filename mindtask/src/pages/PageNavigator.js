@@ -38,7 +38,7 @@ const PageNavigator = () => {
           <Route path="/contact">
             <Contact />
           </Route>
-          <Route exact path="/editPage">
+          <Route exact path="/edit">
             <EditPage />
           </Route>
         </Switch>
