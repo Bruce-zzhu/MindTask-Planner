@@ -20,7 +20,7 @@ export class MindMap extends react.Component {
 
   render() {
     const { mind, options } = this.state;
-    return (<JsMind mind={mind} options={options} styles={{height: 500}} />)
+    return (<JsMind mind={mind} options={options} styles={{height: 500, width: 1000}} />)
   }
 
   _projectToMap(project) {

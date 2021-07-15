@@ -41,22 +41,31 @@ export class ReactJsmind extends React.Component {
       onClick={(e) => {
         // console.log('click');
         this.realSelectNode = this.getNode(e);
-        onClick(e, this.realSelectNode);
+        if (onClick) {
+          onClick(e, this.realSelectNode);
+        }
       }}
       onMouseDown={(e) => {
         // console.log('down');
         this.realSelectNode = this.getNode(e);
-        onMouseDown(e, this.realSelectNode);
+        if (onMouseDown) {
+          onMouseDown(e, this.realSelectNode);
+        }
       }}
       onMouseUp={(e) => {
         // console.log('up');
         this.realSelectNode = this.getNode(e);
-        onMouseUp(e, this.realSelectNode);
+        if (onMouseUp) {
+
+          onMouseUp(e, this.realSelectNode);
+        }
       }}
       onContextMenu={(e) => {
         // console.log('contextMenu');
         this.realSelectNode = this.getNode(e);
-        onContextMenu(e, this.realSelectNode);
+        if (onContextMenu) {
+          onContextMenu(e, this.realSelectNode);
+        }
       }}
       style={this.props.styles}
     ></div>);
