@@ -15,11 +15,12 @@ class Home extends React.Component {
     var current_project = localStorage.getItem("current_project");
     
     if(current_project) {
+      
       projects.push(JSON.parse(current_project))
       localStorage.setItem("current_project", "");
       localStorage.setItem("projects", JSON.stringify(projects));
     }
-    console.log("here")
+    
     this.state = {
       projects: projects,
       pastProjects: pastProjects,
