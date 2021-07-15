@@ -14,14 +14,12 @@ class Home extends React.Component {
       // Number of projects
       projectCount: 1,
     };
-  };
+  }
 
   createProject = () => {
     const initialProjects = this.state.projects.slice();
     const i = this.state.projectCount;
-    initialProjects.push(
-      {name: "Project " + i},
-    );
+    initialProjects.push({ name: "Project " + i });
     this.setState({
       projects: initialProjects,
       projectCount: i + 1,
@@ -34,37 +32,38 @@ class Home extends React.Component {
     const pastProjects = this.state.pastProjects.slice();
     const index = projects.findIndex((element) => element.name === name);
     pastProjects.push(projects[index]);
-    projects.splice(index,1);
+    projects.splice(index, 1);
 
     this.setState({
       projects: projects,
       pastProjects: pastProjects,
-    })
-
-
-  }
+    });
+  };
 
   render() {
     const porjectsElement = this.state.projects.map((project) => {
       return (
-        <div className="box project" ><ProjectBox project={project} onFinishProject={this.finishProject}/></div>
-        
+        <div className="box project">
+          <ProjectBox project={project} onFinishProject={this.finishProject} />
+        </div>
       );
     });
     const pastProjectsElement = this.state.pastProjects.map((project) => {
       return (
-        <div className="box past-project"><PastProjectBox project={project}/></div>
+        <div className="box past-project">
+          <PastProjectBox project={project} />
+        </div>
       );
     });
     return (
       <div className="home">
         <Calendar />
         <h2 className="ongoing">Ongoing Peojects</h2>
-        
-        <div className="box create" onClick={this.createProject} >
+
+        <div className="box create" onClick={this.createProject}>
           <CreateProjectBox />
         </div>
-          {porjectsElement}
+        {porjectsElement}
 
         <h2 className="past">Past Projects</h2>
 

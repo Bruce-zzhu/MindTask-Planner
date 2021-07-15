@@ -1,22 +1,19 @@
 .past-project-box {
-    border: none;
-    text-align: center;
-    background-color: #65BF73;
-    width: 200px;
-    padding: 10px 40px 80px 40px;
-    margin-left: 150px;
-    margin-bottom: 70px;
-    border-radius: 40px;
-    
+  border: none;
+  text-align: center;
+  background-color: #65bf73;
+  width: 200px;
+  padding: 10px 40px 80px 40px;
+  margin-left: 150px;
+  margin-bottom: 70px;
+  border-radius: 40px;
 }
-
 
 .past-project-box:hover {
-    background-color: #4bb35a;
-    cursor: pointer;
+  background-color: #4bb35a;
+  cursor: pointer;
 }
 
-
 .subtasks {
-    color: white;
+  color: white;
 }

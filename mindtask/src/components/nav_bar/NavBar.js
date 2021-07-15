@@ -5,28 +5,27 @@ import "./NavBar.css";
 class NavBar extends React.Component {
   logoutHandle = () => {
     localStorage.setItem("isLoggedIn", false);
-  }
+  };
 
   login = () => {
     localStorage.setItem("isLoggedIn", true);
-  }
+  };
 
   isLoggedIn = () => {
-    return localStorage.getItem("isLoggedIn"); 
-  }
+    return localStorage.getItem("isLoggedIn");
+  };
 
   render() {
     let navBarContent;
     if (this.isLoggedIn()) {
       navBarContent = (
-      <div> 
-        <li className="nav-about">
-          <a onClick={this.logoutHandle} href="/" className="about">
-            Log out
-          </a>
-        </li>
-        
-      </div>
+        <div>
+          <li className="nav-about">
+            <a onClick={this.logoutHandle} href="/" className="about">
+              Log out
+            </a>
+          </li>
+        </div>
       );
     } else {
       navBarContent = (

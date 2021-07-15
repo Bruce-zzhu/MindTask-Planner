@@ -10,29 +10,29 @@ import EditPage from "./edit/EditPage.js";
 const customHistory = createBrowserHistory();
 
 const PageNavigator = () => {
-	return (
-		<div>
-			<Router history={customHistory}>
-				<Switch>
-					<Route exact path="/">
-						<Index />
-					</Route>
-					<Route path="/index">
-						<Index />
-					</Route>
-					<Route path="/home">
-						<Home />
-					</Route>
-					<Route path="/about">
-						<About />
-					</Route>
-					<Route exact path="/editPage">
-						<EditPage />
-					</Route>
-				</Switch>
-			</Router>
-		</div>
-	);
+  return (
+    <div>
+      <Router history={customHistory}>
+        <Switch>
+          <Route exact path="/">
+            <Index />
+          </Route>
+          <Route path="/index">
+            <Index />
+          </Route>
+          <Route path="/home">
+            <Home />
+          </Route>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route exact path="/editPage">
+            <EditPage />
+          </Route>
+        </Switch>
+      </Router>
+    </div>
+  );
 };
 
 export default PageNavigator;
