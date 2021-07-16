@@ -1,7 +1,7 @@
 # MindTask-Planner
 Web app for Hack Sprint 2021
 
-Link to app: https://mind-task-planner.herokuapp.com/
+Link to app: https://mind-task-planner.herokuapp.com/ <br>
 Link to Figma: https://www.figma.com/file/8vB95lcQRwC0nZvBuLgqO4/MindTask?node-id=0%3A1
 
 ## Inspiration
